@@ -3,8 +3,17 @@ from tkinter import messagebox, ttk
 from tkinter.font import Font
 import json
 import os
+import sys
 import random
 import copy
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 try:
     from PIL import Image, ImageTk
@@ -116,8 +125,9 @@ class TournamentApp:
         self.list_font = Font(family="Arial", size=12)
         self.header_font = Font(family="Arial", size=11)
 
-        if os.path.exists("icone_team_builder.ico"):
-            self.root.iconbitmap("icone_team_builder.ico")
+        icon_path = resource_path("icone_team_builder.ico")
+        if os.path.exists(icon_path):
+            self.root.iconbitmap(icon_path)
 
         style = ttk.Style()
         style.theme_use("default")
@@ -224,15 +234,13 @@ class TournamentApp:
         
         self.root.clipboard_clear()
         self.root.clipboard_append(discord_format)
-        
-        messagebox.showinfo("Copié", "Les équipes ont été copiées au format Discord !")
 
     def load_rank_images(self):
         ranks_list = ["B1", "B2", "B3", "S1", "S2", "S3", "G1", "G2", "G3", 
                       "P1", "P2", "P3", "D1", "D2", "D3", "C1", "C2", "C3", 
                       "GC1", "GC2", "GC3", "SSL"]
         
-        folder_path = "ranks"
+        folder_path = resource_path("ranks")
         if not os.path.exists(folder_path):
             return
             
