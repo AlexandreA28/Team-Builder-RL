@@ -18,7 +18,7 @@ Une application de bureau développée en Python (Tkinter) pour générer automa
 Si vous disposez de la version compilée (fichier `.exe`) :
 1. Double-cliquez sur l'application.
 2. Saisissez le Pseudo et MMR de vos joueurs.
-3. Cliqué sur "Générer les équipes" et voilà !
+3. Cliquez sur "Générer les équipes" et voilà !
 
 ### Option 2 : Lancement depuis le code source (Python)
 Si vous souhaitez exécuter ou modifier le code source, vous aurez besoin de Python installé sur votre machine.
@@ -29,7 +29,7 @@ Si vous souhaitez exécuter ou modifier le code source, vous aurez besoin de Pyt
    ```
 2. **Exécution :** Lancez l'interface graphique avec la commande :
    ```bash
-   python interface.py
+   python app.py
    ```
 
 ### Création de l'exécutable (.exe)
