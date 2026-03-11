@@ -1,0 +1,16 @@
+joueurs.json
+
+build/
+dist/
+*.spec
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+venv/
+env/
+.env
+
+.vscode/
+.idea/
