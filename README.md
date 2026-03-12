@@ -41,7 +41,7 @@ Si vous souhaitez compiler l'exécutable vous-même à partir du code source (pa
    ```
 2. **Exécution :** Placez-vous dans le dossier du projet avec votre terminal et lancez la commande de compilation :
    ```bash
-   pyinstaller --onefile --noconsole --icon=icone_team_builder.ico --add-data "ranks;ranks" --add-data "icone_team_builder.ico;." --name "rl_team_builder" app.py
+   pyinstaller --noconsole --icon=icone_team_builder.ico --add-data "ranks;ranks" --add-data "icone_team_builder.ico;." --name "rl_team_builder" app.py
    ```
 Note : L'exécutable final sera généré dans le sous-dossier `dist/`.
 
